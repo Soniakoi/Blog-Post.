@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{%block content%}
+<body>
+<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+<div class="container-fluid"
+    style="font-family: 'Muli', sans-serif; background-color: whitesmoke; background-repeat: no-repeat; background-size: cover;background-position: center;height: 100%;width: 100%;">
+
+    <div class="row">
+
+        <div class="col-md-3">
+
+        </div>
+
+        <div class="col-md-6" id="landing"
+            style="margin-bottom:200px; margin-top: 200px; margin-left: 60px; font-size: 70px;font-weight: bold;">
+
+            <strong>
+                <h1 style="font-size: 150px; margin-left: 90px; font-weight: bolder;">{{name}}</h1>
+            </strong>
+            <a href="{{url_for('main.new_pitch')}}" class="btn btn-secondary" style=" font-size: 40px">Add Pitch</a>
+            <a href="{{url_for('main.post_pitch')}}" class="btn btn-secondary" style=" font-size: 40px">View Your Pitch</a>
+            <a href="{{url_for('auth.register')}}" class="btn btn-secondary" style="font-size: 40px">Create Account </a>
+
+        </div>
+
+        <div class="col-md-3">
+
+        </div>
+
+
+    </div>
+
+
+</div>
+</body>
+
+{%endblock%}

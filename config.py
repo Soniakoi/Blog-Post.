@@ -1,6 +1,8 @@
 
 class Config:
-    pass
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://sonia:sonia@localhost/blog'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
 
 class ProdConfig(Config):
     pass
