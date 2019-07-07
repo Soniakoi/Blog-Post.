@@ -15,7 +15,7 @@ this is a script to every lazy developer or any other that seeks to save time cr
 
 ``` $ chmod +x flaskApp.sh ```
 
-**create a directory of your project and copy the flaskApp.sh file to that destination then execute it from there responding to the prompts to have your desired configuration**
+**create a directory of your project and copy the flaskApp.sh file to that destination then execute it from there responding to the prompts to have cd FLASK_STRUCTURE`your desired configuration**
 
 ``` $ ./flaskApp.sh ```
 
@@ -30,4 +30,4 @@ create with: bootstrap,db,authentication | initialize bootstrap, SQLAlchemy and 
 In the start.sh file it has been set to run on python3.6, change this to your python version
 This script doesnt create a database for you ,it just installs the neccesary packages required to integrate a db seamlessly in the app
 
-![Sample Structure](flaskStructure.png)
+![Sample Structure](flaskStructure.png)# Blog-Post.
