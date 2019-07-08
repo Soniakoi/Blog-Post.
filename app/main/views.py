@@ -2,7 +2,7 @@ from flask import render_template, request, redirect, url_for,abort
 from . import main
 from .. import db,photos
 from flask_login import login_required,current_user
-from ..models import User,Blog
+from ..models import User,Blog,Comment
 from .forms import UpdateProfile
 
 @main.route('/about')
@@ -53,7 +53,7 @@ def new_blog():
         blog=blogform.blog_data.data
         url=blogform.photo_url.data
 
-        new_blog=Blog(title=blog_title, blog_content = blog, date_posted=datetime.now(),photo_url=url)
+        new_blog=Blog(title=blog_title, blog_content = blog, date_posted=datetime.now())
         new_blog.save_blog()
 
         new_blog.save_blog()

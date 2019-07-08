@@ -29,11 +29,11 @@ class User(UserMixin,db.Model):
 
     @password.setter
     def password(self, password):
-            self.pass_secure = generate_password_hash(password)
+            self.pass_hash = generate_password_hash(password)
 
 
     def verify_password(self,password):
-            return check_password_hash(self.pass_secure,password)
+            return check_password_hash(self.password_hash,password)
 
     def __repr__(self):
         return f'User {self.username}'
@@ -45,9 +45,8 @@ class Blog(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     title = db.Column(db.String())
     blog_content = db.Column(db.String())
-    date_posted = db.Column(db.DateTime, nullable=False, default = datetime.utcnow)
-    blog_pic = db.Column(db.String(255))
-    photo_url = db.Column(db.String(500))
+    posted = db.Column(db.DateTime, nullable=False, default = datetime.utcnow)
+    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
 
     def save_blog(self):
         db.session.add(self)
@@ -62,16 +61,7 @@ class Blog(db.Model):
         blog = Blog.query.filter_by(id=id).first()
         return blog
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))
-
-    
-    
-
-
-    def __repr__(self):
-        return f'User {self.username}'
+  
 
 
 class Comment(db.Model):
@@ -83,6 +73,7 @@ class Comment(db.Model):
     comment_content = db.Column(db.String())
     date_comment = db.Column(db.DateTime, nullable=False, default = datetime.utcnow)
     blog_id = db.Column(db.Integer, db.ForeignKey('blogs.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     
     def save_comment(self):
         db.session.add(self)
