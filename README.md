@@ -1,33 +1,42 @@
-# FLASK_STRUCTURE
-this is a script to every lazy developer or any other that seeks to save time creating the whole flask structure
+## Boss Babe Blog!
 
-## SETUP
+## Description
+
+This is a personal blog website where I create and share my opinions and other users can read and comment on them.
+ 
+## Created By: Sonia Wangui Habamba
+
+## Date
+
+6th July 2019
+
+## BDD
+
+| *Behavior* | *Input* | *Output*
+--- | --- 
+Signing up| Click sign up | Display registration form
+Signing in| Click sign in | Display log-in form
+Create Blog| Click create-blog then sign in | Create blog form is displayed
+Display blog| Click blogs on the navbar|Created blogs are displayed
+Delete blog	|click delete blog|	Blog is deleted
+Delete comment |	click delete comment |	comments are deleted
+ 
+## Set-Up
 
 ### clone this repository
 
-``` $ git clone https://github.com/boydndonga/FLASK_STRUCTURE.git ```
+``` $ git clone  https://github.com/Soniawangui/Blog-Post. ```
 
-### make sure you are at its required level
+##Technologoies Used
 
-``` $ cd FLASK_STRUCTURE```
+Python3.6<br/>
+Flask<br/>
 
-### make it executable
+## Support and contact details
 
-``` $ chmod +x flaskApp.sh ```
+If you run into any problem please inform me at @koisonia99@gmail.com.
 
-**create a directory of your project and copy the flaskApp.sh file to that destination then execute it from there responding to the prompts to have cd FLASK_STRUCTURE`your desired configuration**
+### License MIT (https://choosealicense.com/licenses/mit/)
 
-``` $ ./flaskApp.sh ```
-
-| *Option* | *Output* 
---- | --- 
-Should i create a README? | creates a README.md file
-create with bootstrap only | initialize bootstrap for use in the app
-create with: bootstrap and db | initialize bootstrap and SQLAlchemy in your app
-create with: bootstrap,db,authentication | initialize bootstrap, SQLAlchemy and auth blueprnt in your app
-
-### Disclaimer
-In the start.sh file it has been set to run on python3.6, change this to your python version
-This script doesnt create a database for you ,it just installs the neccesary packages required to integrate a db seamlessly in the app
-
-![Sample Structure](flaskStructure.png)# Blog-Post.
+Copyright (c) {2019} **Sonia Habamba**
+  
