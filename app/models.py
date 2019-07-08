@@ -11,13 +11,15 @@ def load_user(user_id):
 
 class User(UserMixin,db.Model):
     __tablename__ = 'users'
-    
+
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(255),index = True)
     email = db.Column(db.String(255),unique = True,index = True)
     password_hash = db.Column(db.String(255))
+    profile_pic_path = db.Column(db.String())
+    pass_secure = db.Column(db.String(255))
 
-    # pass_secure = db.Column(db.String(255))
+   
 
     @property
     def password(self):
