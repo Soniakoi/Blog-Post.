@@ -4,6 +4,7 @@ from .. import db,photos
 from flask_login import login_required,current_user
 from ..models import User,Blog,Comment
 from .forms import UpdateProfile
+from ..request import get_quote
 
 @main.route('/about')
 def about():
@@ -31,10 +32,11 @@ def about():
 def index():
 
     name = "Boss Babe!"
+    quote=get_quote()
   
     # all_blogs = Blogs.get_all_blogs()
     
-    return render_template('index.html',name = name)
+    return render_template('index.html',name = name,quote = quote)
 
     # return '<h1> Hello World </h1>'
 

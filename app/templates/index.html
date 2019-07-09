@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 <body>
+    <title>Boss Babe!</title>
     <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">    
     <div class="container-fluid"
-    style="font-family: 'Satisfy', cursive; background-color: whitesmoke; background-repeat: no-repeat; background-size: cover;background-position: center;height: 100%;width: 100%;">
+    style="font-family: 'Satisfy', cursive; font-size: 50px; background-color:#F2B880; background-repeat: no-repeat; background-size: cover;background-position: center;height: 100%;width: 100%;">
 
     <div class="row">
 
@@ -11,6 +12,8 @@
 
         </div>
 
+        <p>{{quote.quote}}</p>
+        <p>{{quote.author}}</p>
         <div class="col-md-6" id="landing"
             style="margin-bottom:200px; margin-top: 200px; margin-left: 60px; font-size: 70px;font-weight: bold;">
 

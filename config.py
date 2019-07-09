@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://sonia:sonia@localhost/blog'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://sonia:sonia@localhost/web'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SECRET_KEY = 'SECRET_KEY'
@@ -22,10 +22,10 @@ class ProdConfig(Config):
     pass
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://sonia:sonia@localhost/blog'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://sonia:sonia@localhost/web'
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://sonia:sonia@localhost/blog'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://sonia:sonia@localhost/web'
     DEBUG = True
 
 config_options = {
