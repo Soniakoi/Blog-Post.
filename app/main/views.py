@@ -31,7 +31,7 @@ def about():
 @main.route('/')
 def index():
 
-    name = "Boss Babe!"
+    name = "Blog"
     quote=get_quote()
   
     # all_blogs = Blogs.get_all_blogs()

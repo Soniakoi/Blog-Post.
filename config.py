@@ -4,7 +4,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://sonia:sonia@localhost/web'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
-    SECRET_KEY = 'SECRET_KEY'
+    SECRET_KEY = '1234'
 
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
@@ -19,7 +19,7 @@ class Config:
     
 
 class ProdConfig(Config):
-    pass
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://sonia:sonia@localhost/web'
